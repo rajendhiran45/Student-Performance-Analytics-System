@@ -13,3 +13,7 @@ Student Performance Analytics System is a Streamlit-based web application built 
    pip install -r requirements.txt
 2. Run the app:
    streamlit run dashboard.py
+
+## 🌐 Live Demo
+
+👉 [Click here to view the live app](https://student-performance-analytics-system-rajendhiran.streamlit.app/)
