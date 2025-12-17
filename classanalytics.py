@@ -5,8 +5,8 @@ import os
 
 #class analytics
 def class_analytics(rf):
-    st.title("CLASS ANALYTICS")
-    st.caption('CHOOSE CLASS WHICH IS TO BE ANALYZE')
+    st.title("Class Performance Overview")
+    st.caption('Choose Class Which Is to Be Analyze')
 
     subjects = ['Tamil', 'English', 'Maths', 'Science', 'Social Science']
 
@@ -66,5 +66,6 @@ def class_analytics(rf):
         st.success(
             f"Topper: {topper['Student Name']} ({topper['Average']:.2f})"
         )
+
 
 
