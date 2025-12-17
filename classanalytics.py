@@ -56,7 +56,15 @@ def class_analytics(rf):
     st.altair_chart(chart, use_container_width=True)
 
     #display
+    # display
     st.subheader("Class Topper")
-    topper = class_df.loc[class_df['Average'].idxmax()]
+    
+    if class_df.empty:
+        st.warning("⚠️ No student data available for this class.")
+    else:
+        topper = class_df.loc[class_df['Average'].idxmax()]
+        st.success(
+            f"Topper: {topper['Student Name']} ({topper['Average']:.2f})"
+        )
 
-    st.success(f"Topper: {topper['Student Name']} ({topper['Average']:.2f})")
+
