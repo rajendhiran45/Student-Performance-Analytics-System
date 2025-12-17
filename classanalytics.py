@@ -29,7 +29,7 @@ def class_analytics(rf):
     #DISPLAY
     col1,col2,col3,col4=st.columns(4)
     col1.metric("Total Students",total_std)
-    col2.metric("Class Average",class_avg)
+    col2.metric("Class Average",f"{class_avg:.2f}")
     col3.metric("Pass Count",pass_count)
     col4.metric("Fail Count",fail_count)
 
@@ -58,4 +58,5 @@ def class_analytics(rf):
     #display
     st.subheader("Class Topper")
     topper = class_df.loc[class_df['Average'].idxmax()]
+
     st.success(f"Topper: {topper['Student Name']} ({topper['Average']:.2f})")
